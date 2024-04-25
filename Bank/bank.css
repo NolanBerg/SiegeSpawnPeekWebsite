@@ -1,0 +1,15 @@
+.image-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 35%; 
+    padding: 50px;
+}
+
+img{
+    width: 600px;
+    height: auto;
+    border: 4px solid black; 
+    box-sizing: border-box;
+    border-radius: 2px;
+}
