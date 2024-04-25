@@ -22,20 +22,40 @@ h1 {
     text-shadow: 0 0 12px black;
 }
 
+.mapContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.mapRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-right: 575px;
+}
+
+.mapButtonsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px; 
+}
+
 .mapUI {
-    width: 275px; 
+    width: 245px; 
     height: 150px; 
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
     text-shadow: 0 0 18px white;
-    margin-top: 25px; 
-    margin-left: 75px;
-    background-size: cover; 
+    margin: 0 12px 25px 12px;
+    background-size: cover;
     background-repeat: no-repeat; 
     display: flex; 
     align-items: flex-start;
     justify-content: center; 
-    border: 3px solid black; 
+    border: 4px solid black; 
     box-sizing: border-box;
     border-radius: 4px;
 }
@@ -56,3 +76,6 @@ h1 {
     background-image: url("Maps/Clubhouse/clubhouse.jpg");
 }
 
+.coastlineButton{
+    background-image: url("Maps/Coastline/coastline.jpg");
+}

@@ -13,3 +13,7 @@ document.getElementById("chaletPageButton").addEventListener("click", function()
 document.getElementById("clubhousePageButton").addEventListener("click", function() {
     window.location.href = "Maps/Clubhouse/clubhouse.html"; // Go to clubhouse page
 });
+
+document.getElementById("coastlinePageButton").addEventListener("click", function() {
+    window.location.href = "Maps/Coastline/coastline.html"; // Go to coastline page
+});
