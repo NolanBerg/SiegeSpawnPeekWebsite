@@ -1,16 +1,17 @@
 body {
-    background-image: url("siegeextra.jpg");
+    background-image: url("siege.jpeg");
+    background-size: cover; /* Cover the entire screen */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background image fixed as the user scrolls */
+    background-position: center; /* Center the background image */
     margin: 0; /* Remove default body margin */
     padding: 0; /* Remove default body padding */
     overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
+
 h1{
     text-align: center;
-}
-
-h2{
-    color:transparent;
 }
 
 .container {
@@ -21,7 +22,7 @@ h2{
 
 .sidebar {
     position: fixed;
-    top: 0;
+    top: 35px;
     left: 0;
     height: 100%;
     width: 17%;
@@ -55,7 +56,7 @@ h2{
     margin-bottom: 25px;
     background-size: cover;
     background-repeat: no-repeat;
-    border: 4px solid black;
+    border: 2px solid black;
     box-sizing: border-box;
     border-radius: 4px;
 }
