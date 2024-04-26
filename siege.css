@@ -1,64 +1,65 @@
 body {
-    background-image: url("siege.jpg");
+    background-image: url("siegeextra.jpg");
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
-.container {
+h1{
     text-align: center;
 }
 
-h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 65px;
-    padding: 10px;
-    margin: auto;
-    border-radius: 50px;
-    background-color: black;
-    display: inline-block;
-    background: linear-gradient(45deg, #ccc 25%, #333 25%, #333 50%, #ccc 50%, #ccc 75%, #333 75%, #333);
-    background-size: 10px 10px; 
-    -webkit-background-clip: text; 
-    background-clip: text;
-    color: transparent; 
-    text-shadow: 0 0 12px black;
+h2{
+    color:transparent;
 }
 
-.mapContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
+.container {
+    display: grid;
+    grid-template-columns: 17% 75%; /* Divide the screen into left and right quarters */
+    height: 100vh; /* Set the height of the container to 100% of viewport height */
 }
 
-.mapRow {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-right: 575px;
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 17%;
+    overflow-y: auto; /* Enable vertical scrollbar for the sidebar */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.main-content {
+    padding: 20px;
+    height: 100%;
+    overflow: hidden; 
+    position: relative;
 }
 
 .mapButtonsContainer {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1200px; 
+    flex-direction: column; /* Arrange buttons vertically */
+    align-items: flex-start; /* Align buttons to the top of the sidebar */
 }
 
 .mapUI {
-    width: 245px; 
-    height: 150px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 245px;
+    height: 150px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
     text-shadow: 0 0 18px white;
-    margin: 0 12px 25px 12px;
+    margin-bottom: 25px;
     background-size: cover;
-    background-repeat: no-repeat; 
-    display: flex; 
-    align-items: flex-start;
-    justify-content: center; 
-    border: 4px solid black; 
+    background-repeat: no-repeat;
+    border: 4px solid black;
     box-sizing: border-box;
     border-radius: 4px;
 }
+
 
 .bankButton {
     background-image: url("Maps/Bank/bank.jpg");
@@ -76,6 +77,50 @@ h1 {
     background-image: url("Maps/Clubhouse/clubhouse.jpg");
 }
 
-.coastlineButton{
+.coastlineButton {
     background-image: url("Maps/Coastline/coastline.jpg");
+}
+
+.consulateButton {
+    background-image: url("Maps/Consulate/consulate.jpg");
+}
+
+.emeraldplainsButton {
+    background-image: url("Maps/EmeraldPlains/emeraldplains.jpg");
+}
+
+.kafedostoyevskyButton {
+    background-image: url("Maps/KafeDostoyevsky/kafedostoyevsky.jpg");
+}
+
+.kanalButton {
+    background-image: url("Maps/Kanal/kanal.jpg");
+}
+
+.lairButton {
+    background-image: url("Maps/Lair/lair.avif");
+}
+
+.nighthavenlabsButton {
+    background-image: url("Maps/NighthavenLabs/nighthavenlabs.avif");
+}
+
+.oregonButton {
+    background-image: url("Maps/Oregon/oregon.avif");
+}
+
+.outbackButton {
+    background-image: url("Maps/Outback/outback.avif");
+}
+
+.skyscraperButton {
+    background-image: url("Maps/Skyscraper/skyscraper.avif");
+}
+
+.themeparkButton {
+    background-image: url("Maps/ThemePark/themepark.avif");
+}
+
+.villaButton {
+    background-image: url("Maps/Villa/villa.avif");
 }
