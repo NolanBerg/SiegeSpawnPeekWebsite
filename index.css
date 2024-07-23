@@ -1,4 +1,4 @@
-body {
+html, body {
     background-image: url("index.jpeg");
     background-size: cover; /* Cover the entire screen */
     background-repeat: no-repeat;
