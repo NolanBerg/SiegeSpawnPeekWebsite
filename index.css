@@ -13,11 +13,12 @@ html, body {
 
 h1{
     text-align: center;
+    color: white;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 17% 83%; /* Divide the screen into left and right quarters */
+    grid-template-columns: 17% 83%; /* Divide the screen into left and right parts*/
     height: 100vh; /* Set the height of the container to 100% of viewport height */
 }
 
