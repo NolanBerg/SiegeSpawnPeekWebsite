@@ -19,7 +19,7 @@ body {
 
 .sidebar {
     position: fixed;
-    top: 75px; /* Adjust for banner height */
+    top: 55px; /* Adjust for banner height */
     left: 0;
     bottom: 0; /* Make sidebar height flexible */
     width: 17%;
