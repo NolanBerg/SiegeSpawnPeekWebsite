@@ -1,3 +1,17 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.mapUI');
+
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+            button.classList.add('hover');
+        });
+
+        button.addEventListener('mouseleave', () => {
+            button.classList.remove('hover');
+        });
+    });
+});
+
 document.getElementById("bankPageButton").addEventListener("click", function() {
     window.location.href = "Maps/Bank/bank.html"; // Go to bank page
 });

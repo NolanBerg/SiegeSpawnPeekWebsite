@@ -1,19 +1,27 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 17% 83%; /* Divide the screen into left and right parts*/
-    height: 100vh; /* Set the height of the container to 100% of viewport height */
+    grid-template-columns: 17% 83%; /* Divide the screen into left and right parts */
+    height: calc(100vh - 50px); /* Set the height of the container to 100% of viewport height minus banner height */
     margin-top: 50px; /* Adjust for banner height */
+    flex-grow: 1; /* Allow the container to grow to fill available space */
 }
 
 .sidebar {
     position: fixed;
     top: 75px; /* Adjust for banner height */
     left: 0;
-    height: 100%;
+    bottom: 0; /* Make sidebar height flexible */
     width: 17%;
     overflow-y: auto; /* Enable vertical scrollbar for the sidebar */
     padding: 20px;
@@ -43,6 +51,7 @@ body {
     line-height: 1.2; /* Adjust line height */
     position: relative; /* Positioning context */
     margin: 0; /* Ensure no extra margin is applied directly to the button */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .mapUI span {
@@ -55,10 +64,19 @@ body {
     border-radius: 5px; /* Rounded corners */
 }
 
+/* Add hover effect to buttons */
+.mapUI.hover {
+    border: 3px solid #FFD700; /* Change border color on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
 .main-content {
     padding: 20px;
     height: 100%;
-    overflow: hidden; 
+    overflow: auto; /* Enable scrolling for the main content area */
     position: relative;
 }
 
@@ -133,11 +151,44 @@ body {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Center the text */
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000; /* Ensure the banner is above other content */
+    padding: 0 20px; /* Add some padding to the left and right */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.banner-text {
+    display: block; /* Ensure span behaves like a block element */
+    font-size: 24px; /* Adjust font size if needed */
+    color: white; /* Text color */
+    text-shadow: 0 0 12px white; /* Adjust text shadow for consistency */
+    padding: 2px 8px; /* Reduce padding to make background thinner */
+    background-color: rgba(0, 0, 0, 0.5); /* Background color with semi-transparency */
+    border-radius: 5px; /* Rounded corners */
+    flex-grow: 1; /* Allow the text to take up remaining space */
+    text-align: center; /* Center the text horizontally */
+}
+
+.email-link {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    z-index: 1000; /* Ensure the link is above other content */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Optional: add margin to separate from the bottom */
+}
+
+.email-link:hover {
+    text-decoration: underline;
 }
