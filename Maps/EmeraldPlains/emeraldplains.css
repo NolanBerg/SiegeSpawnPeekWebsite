@@ -2,21 +2,27 @@ h1 {
     text-align: center;
 }
 
-.video-container { 
+.video-container {
     position: relative; /* Relative positioning to contain the overlay */
-    width: 100%;
-    height: calc(100vh - 50px); /* Adjust height if needed to fit the viewport */
+    width: 800px; /* Set a fixed width for the video container */
+    height: auto; /* Adjust height to be automatic */
+    margin: 20px auto; /* Center the container and add vertical spacing */
     overflow: hidden; /* Hide any overflow */
     z-index: 1; /* Ensure video container is below the button */
+}
+
+.video-container::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; /* Maintain aspect ratio (16:9) */
 }
 
 .video-container video {
     position: absolute;
     top: 0; /* Adjust top value to move the video up */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 800px;
-    height: auto;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border: 4px solid black; 
     box-sizing: border-box;
     border-radius: 4px;
