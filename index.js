@@ -75,3 +75,7 @@ document.getElementById("themeparkPageButton").addEventListener("click", functio
 document.getElementById("villaPageButton").addEventListener("click", function() {
     window.location.href = "Maps/Villa/villa.html"; // Go to villa page
 });
+
+document.getElementById("aboutPageButton").addEventListener("click", function() {
+    window.location.href = "BannerLinks/about.html";
+});

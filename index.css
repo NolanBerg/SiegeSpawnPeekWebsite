@@ -162,6 +162,14 @@ body {
     box-sizing: border-box; /* Include padding in width calculation */
 }
 
+.banner-button {
+   border-radius: 5px;
+   border-color: rgb(214, 212, 212);
+   width: 70px;
+   height: 30px;
+   font-size: 15px;
+}
+
 .banner-text {
     display: block; /* Ensure span behaves like a block element */
     font-size: 24px; /* Adjust font size if needed */
