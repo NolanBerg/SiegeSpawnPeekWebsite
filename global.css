@@ -48,7 +48,7 @@ h1 {
     padding: 10px 20px;
     font-size: 18px;
     color: white;
-    background-color: #007BFF; /* Bootstrap primary blue color */
+    background-color: grey; /* Bootstrap primary blue color */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -58,7 +58,7 @@ h1 {
 }
 
 #mainMenuButton:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: rgb(109, 108, 108); /* Darker blue on hover */
     transform: scale(1.05); /* Slightly larger on hover */
 }
 
