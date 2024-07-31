@@ -75,6 +75,13 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.main-content {
+    padding: 20px;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+}
+
 .bankButton {
     background-image: url("Maps/Bank/bank.avif");
 }
@@ -212,13 +219,6 @@ body {
     text-decoration: underline;
 }
 
-.main-content {
-    padding: 20px;
-    height: 100%;
-    overflow: auto;
-    position: relative;
-}
-
 .video-container {
     position: fixed; /* Relative positioning to contain the overlay */
     width: 1100px; /* Set a fixed width for the video container */
@@ -249,7 +249,7 @@ body {
 
 .text-overlay {
     position: absolute;
-    top: 10px; /* Position text as needed */
+    top: 10px; /* Adjust the top value to move the text above the video */
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -257,5 +257,5 @@ body {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     padding: 10px;
     border-radius: 5px;
-    z-index: 2; /* Ensure text is above the video */
+    z-index: 3; /* Ensure text is above the video */
 }
