@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -40,11 +41,11 @@ body {
 }
 
 .mapUI {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    width: 245px;
-    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 238px; /* Reduced width for a boxier look */
+    height: 142px; /* Reduced height for a boxier look */
     font-family: Arial, Helvetica, sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
@@ -60,7 +61,7 @@ body {
 
 .mapUI span {
     display: block;
-    font-size: 16px;
+    font-size: 14px; /* Slightly smaller font size */
     color: white;
     text-shadow: 0 0 12px white;
     padding: 2px 8px;
@@ -222,16 +223,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1100px;
+    width: 100%; /* Updated to be responsive */
+    max-width: 1000px; /* Maximum width for the video */
     margin: 40px auto; /* Center the container and add vertical spacing */
-    position: fixed;
-    margin-left: 150px;
+    position: fixed; /* Use relative positioning */
+    margin-left: 10%; /* Align with sidebar width */
 }
 
 .video-container video {
     width: 100%;
     height: auto;
-    border: 6px solid black; 
+    border: 6px solid black;
     box-sizing: border-box;
     border-radius: 4px;
 }
@@ -240,4 +242,23 @@ body {
     color: black; /* Black text color */
     font-size: 24px;
     padding: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 30% 70%; /* Adjust columns for smaller screens */
+    }
+    .sidebar {
+        width: 30%; /* Adjust width for smaller screens */
+    }
+    .mapUI {
+        width: 150px; /* Adjust width for smaller screens */
+        height: 75px; /* Adjust height for smaller screens */
+        font-size: 12px;
+    }
+    .video-container {
+        margin-left: 0;
+        padding: 10px; /* Add padding for smaller screens */
+    }
 }
