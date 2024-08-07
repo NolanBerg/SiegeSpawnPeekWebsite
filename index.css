@@ -45,7 +45,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 90%; /* Make the buttons responsive */
-    height: 120px; /* Keep the height boxy */
+    height: 130px; /* Keep the height boxy */
     font-family: Arial, Helvetica, sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
