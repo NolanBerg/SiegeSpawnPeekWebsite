@@ -262,6 +262,9 @@ body {
         height: 75px; /* Adjust height for smaller screens */
         font-size: 12px;
     }
+    .mapUI span {
+        padding: 2px 8px;
+    }
     .banner {
         flex-direction: column; /* Stack text and buttons */
         height: auto; /* Allow flexible height */
