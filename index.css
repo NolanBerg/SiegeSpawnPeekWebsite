@@ -61,7 +61,7 @@ body {
 
 .mapUI span {
     display: block;
-    font-size: 14px; /* Slightly smaller font size */
+    font-size: 13px; /* Slightly smaller font size */
     color: white;
     text-shadow: 0 0 12px white;
     padding: 2px 8px;
@@ -199,7 +199,7 @@ body {
     border-radius: 5px;
     text-align: center;
     flex-grow: 1; /* Allow text to take available space */
-    margin-left: 275px;
+    margin-left: 240px;
 }
 
 .email-link {
