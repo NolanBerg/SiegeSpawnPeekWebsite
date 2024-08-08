@@ -154,7 +154,7 @@ body {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Center the text and buttons */
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     position: fixed;
@@ -167,17 +167,17 @@ body {
 
 .banner-buttons {
     display: flex;
-    gap: 15px; /* Space between buttons */
-    position: absolute;
-    right: 20px; /* Adjust as necessary */
+    gap: 10px; /* Reduce space between buttons */
+    align-items: center; /* Align buttons vertically */
+    margin-left: auto; /* Push buttons to the right side */
 }
 
 .banner-button {
     border-radius: 5px;
     border: none;
-    width: 75px;
-    height: 35px;
-    font-size: 15px;
+    width: 75px; /* Default width for desktop */
+    height: 35px; /* Default height for desktop */
+    font-size: 14px; /* Slightly smaller font size */
     background-color: white;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
@@ -198,6 +198,8 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     text-align: center;
+    flex-grow: 1; /* Allow text to take available space */
+    margin-left: 275px;
 }
 
 .email-link {
@@ -256,6 +258,22 @@ body {
         width: 100%; /* Adjust width for smaller screens */
         height: 75px; /* Adjust height for smaller screens */
         font-size: 12px;
+    }
+    .banner {
+        flex-direction: column; /* Stack text and buttons */
+        height: auto; /* Allow flexible height */
+        padding: 10px; /* Add padding for better spacing */
+    }
+    .banner-text {
+        margin-bottom: 5px; /* Add margin below text */
+    }
+    .banner-buttons {
+        justify-content: center; /* Center buttons on mobile */
+        gap: 5px; /* Reduce space between buttons on mobile */
+    }
+    .banner-button {
+        width: 60px; /* Smaller width for mobile */
+        height: 30px; /* Smaller height for mobile */
     }
     .video-container {
         margin-left: 0;
