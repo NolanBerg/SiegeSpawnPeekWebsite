@@ -263,7 +263,7 @@ body {
         font-size: 12px;
     }
     .mapUI span {
-        padding: 2px 8px;
+        padding: 2px 6px;
     }
     .banner {
         flex-direction: column; /* Stack text and buttons */
