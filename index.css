@@ -203,6 +203,7 @@ body {
     text-align: center;
     flex-grow: 1; /* Allow text to take available space */
     text-align: center; /* Center text on desktop */
+    margin-left: 275px;
 }
 
 .email-link {
@@ -224,6 +225,22 @@ body {
     text-decoration: underline;
 }
 
+.text-overlay {
+    color: white; /* White text color for contrast */
+    font-size: 22px; /* Slightly larger font size */
+    font-family: 'Arial', sans-serif; /* Set a specific font family */
+    font-weight: bold; /* Bold text for emphasis */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add a subtle shadow */
+    padding: 10px 20px; /* More padding for better readability */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 8px; /* Rounded corners */
+    position: absolute; /* Position it absolutely */
+    top: 10px; /* Position from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the text using transform */
+    z-index: 10; /* Ensure it is above the video */
+}
+
 .video-container {
     display: flex;
     flex-direction: column;
@@ -241,12 +258,6 @@ body {
     border: 6px solid black;
     box-sizing: border-box;
     border-radius: 4px;
-}
-
-.text-overlay {
-    color: black; /* Black text color */
-    font-size: 24px;
-    padding: 5px;
 }
 
 /* Responsive styles */
