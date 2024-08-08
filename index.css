@@ -285,6 +285,7 @@ body {
     .banner-text {
         margin-bottom: 5px; /* Add margin below text */
         text-align: center; /* Center text on mobile */
+        margin-left: 0px;
     }
     .banner-buttons {
         justify-content: center; /* Center buttons on mobile */
@@ -303,5 +304,8 @@ body {
     }
     .email-link {
         font-size: 14px;
+    }
+    .text-overlay {
+        font-size: 12px;
     }
 }
