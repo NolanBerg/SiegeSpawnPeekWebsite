@@ -61,7 +61,7 @@ body {
 
 .mapUI span {
     display: block;
-    font-size: 13px; /* Slightly smaller font size */
+    font-size: 14px; /* Slightly smaller font size */
     color: white;
     text-shadow: 0 0 12px white;
     padding: 2px 8px;
@@ -154,7 +154,7 @@ body {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the text and buttons */
+    justify-content: space-between; /* Center the text and space buttons */
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     position: fixed;
@@ -169,7 +169,6 @@ body {
     display: flex;
     gap: 10px; /* Reduce space between buttons */
     align-items: center; /* Align buttons vertically */
-    margin-left: auto; /* Push buttons to the right side */
 }
 
 .banner-button {
@@ -199,7 +198,7 @@ body {
     border-radius: 5px;
     text-align: center;
     flex-grow: 1; /* Allow text to take available space */
-    margin-left: 240px;
+    text-align: center; /* Center text on desktop */
 }
 
 .email-link {
@@ -266,6 +265,7 @@ body {
     }
     .banner-text {
         margin-bottom: 5px; /* Add margin below text */
+        text-align: center; /* Center text on mobile */
     }
     .banner-buttons {
         justify-content: center; /* Center buttons on mobile */
