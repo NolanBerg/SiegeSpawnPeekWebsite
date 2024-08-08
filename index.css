@@ -290,4 +290,7 @@ body {
         margin-left: 0;
         padding: 10px; /* Add padding for smaller screens */
     }
+    .email-link {
+        font-size: 14px;
+    }
 }
