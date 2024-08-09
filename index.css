@@ -246,11 +246,11 @@ body {
 
 .text-overlay {
     color: white; /* White text color for contrast */
-    font-size: 22px; /* Slightly larger font size */
+    font-size: 18px; /* Slightly larger font size */
     font-family: 'Arial', sans-serif; /* Set a specific font family */
     font-weight: bold; /* Bold text for emphasis */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add a subtle shadow */
-    padding: 10px 20px; /* More padding for better readability */
+    padding: 6px 12px; /* More padding for better readability */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     border-radius: 8px; /* Rounded corners */
     position: absolute; /* Position it absolutely */
@@ -306,6 +306,8 @@ body {
         font-size: 14px;
     }
     .text-overlay {
-        font-size: 12px;
+        font-size: 16px; /* Smaller font size for mobile */
+        padding: 5px 10px; /* Reduced padding for mobile */
+        top: 5px; /* Adjust top position for mobile */
     }
 }
