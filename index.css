@@ -306,8 +306,8 @@ body {
         font-size: 14px;
     }
     .text-overlay {
-        font-size: 16px; /* Smaller font size for mobile */
-        padding: 5px 10px; /* Reduced padding for mobile */
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 3px 6px; /* Reduced padding for mobile */
         text-align: center;
         top: 15px;
     }
