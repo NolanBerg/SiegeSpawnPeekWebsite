@@ -309,5 +309,6 @@ body {
         font-size: 16px; /* Smaller font size for mobile */
         padding: 5px 10px; /* Reduced padding for mobile */
         top: 5px; /* Adjust top position for mobile */
+        text-align: center;
     }
 }
