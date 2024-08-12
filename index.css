@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -12,6 +11,12 @@ body {
     background-size: cover; /* Ensures the image covers the entire background */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center center; /* Centers the image */
+}
+
+img {
+  width: 1375px;
+  height: auto;
+  position: fixed;
 }
 
 .container {
