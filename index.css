@@ -14,10 +14,10 @@ body {
 }
 
 .siegeimg {
-  width: 1560px;
+  width: 1712px;
   height: auto;
   position: fixed;
-  left: 152px;
+  left: 0px;
   z-index: 0; /* Lower z-index for the image */
 }
 
@@ -160,7 +160,7 @@ p {
 
 .banner {
     width: 100%;
-    height: 55px;
+    height: 70px;
     background-color: black;
     color: white;
     display: flex;
@@ -204,7 +204,7 @@ p {
 }
 
 .banner-text {
-    font-size: 24px;
+    font-size: 28px;
     color: white;
     text-shadow: 0 0 12px white;
     padding: 2px 8px;
