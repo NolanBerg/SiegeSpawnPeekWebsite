@@ -2,7 +2,66 @@ h1 {
     text-align: center;
 }
 
+.banner {
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Center the text and space buttons */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2; /* Higher z-index for banner */
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.banner-buttons {
+    display: flex;
+    gap: 10px; /* Reduce space between buttons */
+    align-items: center; /* Align buttons vertically */
+}
+
+.banner-button {
+    border-radius: 5px;
+    border: none;
+    width: 75px; /* Default width for desktop */
+    height: 35px; /* Default height for desktop */
+    font-size: 14px; /* Slightly smaller font size */
+    background-color: white;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-button:hover {
+    background-color: #FFD700;
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+}
+
+.banner-text {
+    font-size: 28px;
+    color: white;
+    text-shadow: 0 0 12px white;
+    padding: 2px 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    text-align: center;
+    flex-grow: 1; /* Allow text to take available space */
+    text-align: center; /* Center text on desktop */
+    margin-left: 275px;
+}
+
 .video-container {
+    top: 60px;
     position: relative; /* Relative positioning to contain the overlay */
     width: 800px; /* Set a fixed width for the video container */
     height: auto; /* Adjust height to be automatic */
@@ -19,7 +78,7 @@ h1 {
 
 .video-container video {
     position: absolute;
-    top: 0; /* Adjust top value to move the video up */
+    top: 0px; /* Adjust top value to move the video up */
     left: 0;
     width: 100%;
     height: 100%;
@@ -43,6 +102,7 @@ h1 {
 
 /* Style for the main menu button */
 #mainMenuButton {
+    top: 65px;
     display: block;
     margin: 20px auto; /* Center the button */
     padding: 10px 20px;
@@ -54,7 +114,7 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     position: relative;
-    z-index: 10;
+    z-index: 0;
 }
 
 #mainMenuButton:hover {

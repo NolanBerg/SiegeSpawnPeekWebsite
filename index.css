@@ -6,26 +6,6 @@ html, body {
 
 body {
     display: flex;
-    flex-direction: column;
-    background-image: url(''); /* Replace with the path to your image */
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center center; /* Centers the image */
-}
-
-.siegeimg {
-  width: 1712px;
-  height: auto;
-  position: fixed;
-  left: 0px;
-  z-index: 0; /* Lower z-index for the image */
-}
-
-p {
-    z-index: 1; /* Higher z-index for text */
-    position: fixed; /* Keep text in a fixed position */
-    top: 100px; /* Adjust the top position as needed */
-    left: 300px; /* Adjust the left position as needed */
 }
 
 .container {
