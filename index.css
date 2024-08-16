@@ -217,14 +217,12 @@ body {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    img{
-        display: none;
-    }
     .container {
         grid-template-columns: 30% 70%; /* Adjust columns for smaller screens */
     }
     .sidebar {
         width: 30%; /* Adjust width for smaller screens */
+        top: 65px;
     }
     .mapUI {
         width: 100%; /* Adjust width for smaller screens */
