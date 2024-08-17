@@ -30,6 +30,50 @@ body {
     z-index: 1; /* Ensure sidebar is above the image */
 }
 
+/* Remove scrollbar outline on hover */
+.sidebar::-webkit-scrollbar {
+    width: 0; /* Initially hide the scrollbar */
+    background: transparent; /* Make the scrollbar background transparent */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888; /* Customize scrollbar thumb if you want */
+    border-radius: 10px; /* Rounded scrollbar thumb */
+}
+
+.sidebar:hover::-webkit-scrollbar {
+    width: 8px; /* Show the scrollbar when hovered over the sidebar */
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb {
+    background: #555; /* Darker thumb when hovered */
+}
+
+/* Firefox scrollbar styling */
+.sidebar {
+    scrollbar-width: thin; /* Hide scrollbar initially */
+    scrollbar-color: #888 transparent; /* Thumb color and track color */
+}
+
+.sidebar:hover {
+    scrollbar-width: auto; /* Show scrollbar when hovered */
+}
+
+/* Ensure the sidebar hides the scrollbar until scrolling */
+.sidebar {
+    overflow-y: auto; /* Enable scrolling only when needed */
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #555; /* Darker color for the scrollbar thumb */
+    border-radius: 10px;
+}
+
 .mapButtonsContainer {
     display: flex;
     flex-direction: column;
