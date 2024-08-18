@@ -167,6 +167,6 @@ h1 {
         padding: 8px 16px; /* Adjust padding */
         font-size: 16px; /* Smaller font size */
         margin: 20px auto; /* Adjust margin to move it below the banner */
-        margin-top: 80px; /* Add top margin to avoid overlap with banner */
+        margin-top: 40px; /* Add top margin to avoid overlap with banner */
     }
 }
