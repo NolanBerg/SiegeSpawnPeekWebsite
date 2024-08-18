@@ -126,3 +126,53 @@ h1 {
     background-color: #004085; /* Even darker blue on click */
     transform: scale(0.95); /* Slightly smaller on click */
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column; /* Stack text and buttons vertically */
+        height: auto; /* Adjust height */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    .banner-text {
+        font-size: 24px; /* Smaller font size */
+        margin-left: 0; /* Remove margin to center text */
+        text-align: center; /* Center the text */
+        margin-bottom: 10px; /* Space between text and buttons */
+    }
+
+    .banner-buttons {
+        justify-content: center; /* Center the buttons */
+        gap: 5px; /* Reduce gap between buttons */
+    }
+
+    .banner-button {
+        width: 60px; /* Smaller width for buttons */
+        height: 30px; /* Smaller height */
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .video-container {
+        width: 100%; /* Full width on smaller screens */
+        margin: 10px auto; /* Less margin */
+        border-width: 2px; /* Thinner border */
+    }
+
+    .video-container video {
+        border-width: 2px; /* Thinner video border */
+    }
+
+    .text-overlay {
+        font-size: 18px; /* Smaller text */
+        padding: 5px; /* Less padding */
+        top: 5px; /* Adjust positioning */
+    }
+
+    #mainMenuButton {
+        padding: 8px 16px; /* Adjust padding */
+        font-size: 16px; /* Smaller font size */
+        margin: 10px auto; /* Less margin */
+    }
+}
+
