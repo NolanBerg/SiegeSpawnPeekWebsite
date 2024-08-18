@@ -127,7 +127,6 @@ h1 {
     transform: scale(0.95); /* Slightly smaller on click */
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     .banner {
         flex-direction: column; /* Stack text and buttons */
@@ -167,7 +166,7 @@ h1 {
     #mainMenuButton {
         padding: 8px 16px; /* Adjust padding */
         font-size: 16px; /* Smaller font size */
-        margin: 10px auto; /* Less margin */
+        margin: 20px auto; /* Adjust margin to move it below the banner */
+        margin-top: 80px; /* Add top margin to avoid overlap with banner */
     }
 }
-
