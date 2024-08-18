@@ -79,3 +79,7 @@ document.getElementById("villaPageButton").addEventListener("click", function() 
 document.getElementById("aboutPageButton").addEventListener("click", function() {
     window.location.href = "/BannerLinks/about.html";
 });
+
+document.getElementById("contactPageButton").addEventListener("click", function() {
+    window.location.href = "/BannerLinks/contact.html";
+});
