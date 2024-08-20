@@ -1,23 +1,38 @@
+/* Video Background */
+#videoBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Place behind everything else */
+    object-fit: cover; /* Ensure the video covers the entire background */
+}
+
+/* General Styles */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden; /* Prevent scrolling to ensure video stays fixed */
 }
 
 body {
     display: flex;
+    flex-direction: column;
 }
 
+/* Container */
 .container {
     display: grid;
     grid-template-columns: 30% 70%;
     height: calc(100vh - 55px);
     margin-top: 55px;
-    flex-grow: 1;
     position: relative; /* Ensure z-index works */
     z-index: 1; /* Higher z-index for container */
 }
 
+/* Sidebar */
 .sidebar {
     position: fixed;
     top: 55px;
@@ -27,10 +42,10 @@ body {
     overflow-y: auto;
     padding: 20px;
     box-sizing: border-box;
-    z-index: 1; /* Ensure sidebar is above the image */
+    z-index: 1; /* Ensure sidebar is above the video */
 }
 
-/* Remove scrollbar outline on hover */
+/* Hide scrollbar until hovered */
 .sidebar::-webkit-scrollbar {
     width: 0; /* Initially hide the scrollbar */
     background: transparent; /* Make the scrollbar background transparent */
@@ -59,21 +74,6 @@ body {
     scrollbar-width: auto; /* Show scrollbar when hovered */
 }
 
-/* Ensure the sidebar hides the scrollbar until scrolling */
-.sidebar {
-    overflow-y: auto; /* Enable scrolling only when needed */
-}
-
-.sidebar::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 10px;
-}
-
-.sidebar::-webkit-scrollbar-thumb {
-    background-color: #555; /* Darker color for the scrollbar thumb */
-    border-radius: 10px;
-}
-
 .mapButtonsContainer {
     display: flex;
     flex-direction: column;
@@ -82,6 +82,7 @@ body {
     margin-top: 20px; /* Add margin for mobile adjustments */
 }
 
+/* Map Button Styles */
 .mapUI {
     display: flex;
     flex-direction: column;
@@ -118,6 +119,7 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Specific Map Button Backgrounds */
 .bankButton {
     background-image: url("Maps/Bank/bank.avif");
 }
@@ -182,6 +184,7 @@ body {
     background-image: url("Maps/Villa/villa.avif");
 }
 
+/* Banner */
 .banner {
     width: 100%;
     height: 70px;
@@ -240,11 +243,12 @@ body {
     margin-left: 275px;
 }
 
+/* Email Link */
 .email-link {
     position: fixed;
     bottom: 0;
     right: 20px;
-    z-index: 1; /* Higher z-index for email link */
+    z-index: 2; /* Higher z-index for email link */
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: white;
