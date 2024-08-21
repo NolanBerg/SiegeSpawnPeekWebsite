@@ -65,7 +65,7 @@ body {
 
 .banner-button:hover {
     background-color: #FFD700;
-    transform: scale(1.1); /* Slightly enlarge button on hover */
+    transform: scale(1.1);/* Slightly enlarge button on hover */
 }
 
 .banner-text {
@@ -120,6 +120,7 @@ body {
 }
 
 /* Dropdown Menu in Secondary Banner */
+/* Dropdown Menu in Secondary Banner */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -130,17 +131,20 @@ body {
     color: white;
     padding: 0px 60px;
     cursor: pointer;
-    background-color:  rgb(42, 42, 42); /* Ensure it blends with the banner */
+    background-color: rgb(42, 42, 42); /* Ensure it blends with the banner */
+    width: 100%; /* Set button width to 100% of its container */
+    box-sizing: border-box;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: white;
-    min-width: 160px;
+    width: 100%; /* Set dropdown width to match the button width */
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 3; /* Higher z-index for dropdown */
     left: 0; /* Align with the dropdown button */
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .dropdown-content a {
