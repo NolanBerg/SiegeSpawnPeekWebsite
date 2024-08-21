@@ -119,11 +119,6 @@ body {
     overflow-y: auto; /* Enable vertical scrolling */
 }
 
-/* Show dropdown on hover (for desktop) */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 .dropdown-content.show {
     display: block; /* Show the dropdown when the 'show' class is added */
 }
@@ -140,6 +135,10 @@ body {
     background-color: #f1f1f1;
 }
 
+.dropdown:hover .dropdown-content {
+    display: block; /* Show the dropdown on hover for desktop */
+}
+
 .dropdown:hover .dropdown-button {
     background-color: #555; /* Darken the button on hover */
 }
@@ -147,14 +146,14 @@ body {
 /* Secondary Buttons */
 .secondary-buttons {
     display: flex;
-    gap: 10px; /* Space between the buttons */
+    gap: 20px; /* Space between the buttons */
     margin-left: 20px;
 }
 
 .secondary-button {
     font-size: 28px;
     color: white;
-    padding: 0px 40px;
+    padding: 0px 30px;
     cursor: pointer;
     background-color: rgb(33, 33, 33); /* Ensure it blends with the banner */
     text-decoration: none;
@@ -195,5 +194,10 @@ body {
     }
     .email-link {
         font-size: 14px;
+    }
+
+    /* Prevent hover behavior on mobile */
+    .dropdown:hover .dropdown-content {
+        display: none;
     }
 }
