@@ -30,7 +30,7 @@ body {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Center the text and space buttons */
+    justify-content: center; /* Center the text */
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     position: fixed;
@@ -41,33 +41,6 @@ body {
     box-sizing: border-box;
 }
 
-.banner-buttons {
-    display: flex;
-    gap: 10px; /* Reduce space between buttons */
-    align-items: center; /* Align buttons vertically */
-}
-
-.banner-button {
-    border-radius: 5px;
-    border: none;
-    width: 75px; /* Default width for desktop */
-    height: 35px; /* Default height for desktop */
-    font-size: 14px; /* Slightly smaller font size */
-    background-color: white;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
-    cursor: pointer; /* Pointer cursor on hover */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.banner-button:hover {
-    background-color: #FFD700;
-    transform: scale(1.1);/* Slightly enlarge button on hover */
-}
-
 .banner-text {
     font-size: 30px;
     color: white;
@@ -76,9 +49,6 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     text-align: center;
-    flex-grow: 1; /* Allow text to take available space */
-    text-align: center; /* Center text on desktop */
-    margin-left: 275px;
 }
 
 /* Email Link */
@@ -105,7 +75,7 @@ body {
 .secondary-banner {
     width: 100%;
     height: 70px;
-    background-color: rgb(42, 42, 42);
+    background-color: rgb(33, 33, 33);
     color: white;
     display: flex;
     align-items: center;
@@ -120,7 +90,6 @@ body {
 }
 
 /* Dropdown Menu in Secondary Banner */
-/* Dropdown Menu in Secondary Banner */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -129,10 +98,10 @@ body {
 .dropdown-button {
     font-size: 28px;
     color: white;
-    padding: 0px 60px;
+    padding: 0px 40px;
     cursor: pointer;
-    background-color: rgb(42, 42, 42); /* Ensure it blends with the banner */
-    width: 100%; /* Set button width to 100% of its container */
+    background-color: rgb(33, 33, 33); /* Ensure it blends with the banner */
+    width: auto; /* Allow button to size based on content */
     box-sizing: border-box;
 }
 
@@ -145,6 +114,8 @@ body {
     z-index: 3; /* Higher z-index for dropdown */
     left: 0; /* Align with the dropdown button */
     box-sizing: border-box; /* Ensure padding is included in the width */
+    max-height: 60vh; /* Set max height to 60% of the viewport height */
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .dropdown-content a {
@@ -167,6 +138,33 @@ body {
     background-color: #555; /* Darken the button on hover */
 }
 
+/* Secondary Buttons */
+.secondary-buttons {
+    display: flex;
+    gap: 10px; /* Space between the buttons */
+    margin-left: 20px;
+}
+
+.secondary-button {
+    font-size: 28px;
+    color: white;
+    padding: 0px 40px;
+    cursor: pointer;
+    background-color: rgb(33, 33, 33); /* Ensure it blends with the banner */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.secondary-button:hover {
+    background-color: #555; /* Darken the button on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
     .banner {
@@ -180,16 +178,14 @@ body {
         text-align: center; /* Center text on mobile */
         margin-left: 0px;
     }
-    .banner-buttons {
+    .secondary-buttons {
         justify-content: center; /* Center buttons on mobile */
         gap: 5px; /* Reduce space between buttons on mobile */
     }
-    .banner-button {
+    .secondary-button {
         width: 60px; /* Smaller width for mobile */
         height: 30px; /* Smaller height for mobile */
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-size: 14px;
     }
     .email-link {
         font-size: 14px;
