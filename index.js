@@ -1,14 +1,15 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.mapUI');
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownButton = document.querySelector('.dropdown-button');
+    const dropdownContent = document.querySelector('.dropdown-content');
 
-    buttons.forEach(button => {
-        button.addEventListener('mouseenter', () => {
-            button.classList.add('hover');
-        });
+    dropdownButton.addEventListener('click', function() {
+        dropdownContent.classList.toggle('show');
+    });
 
-        button.addEventListener('mouseleave', () => {
-            button.classList.remove('hover');
-        });
+    // Optional: Close the dropdown if clicking outside of it
+    window.addEventListener('click', function(event) {
+        if (!dropdownButton.contains(event.target) && !dropdownContent.contains(event.target)) {
+            dropdownContent.classList.remove('show');
+        }
     });
 });
-
