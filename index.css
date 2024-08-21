@@ -22,172 +22,10 @@ body {
     flex-direction: column;
 }
 
-/* Container */
-.container {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    height: calc(100vh - 55px);
-    margin-top: 55px;
-    position: relative; /* Ensure z-index works */
-    z-index: 1; /* Higher z-index for container */
-}
-
-/* Sidebar */
-.sidebar {
-    position: fixed;
-    top: 55px;
-    left: 0;
-    bottom: 0;
-    width: 30%;
-    overflow-y: auto;
-    padding: 20px;
-    box-sizing: border-box;
-    z-index: 1; /* Ensure sidebar is above the video */
-}
-
-/* Hide scrollbar until hovered */
-.sidebar::-webkit-scrollbar {
-    width: 0; /* Initially hide the scrollbar */
-    background: transparent; /* Make the scrollbar background transparent */
-}
-
-.sidebar::-webkit-scrollbar-thumb {
-    background: #888; /* Customize scrollbar thumb if you want */
-    border-radius: 10px; /* Rounded scrollbar thumb */
-}
-
-.sidebar:hover::-webkit-scrollbar {
-    width: 8px; /* Show the scrollbar when hovered over the sidebar */
-}
-
-.sidebar:hover::-webkit-scrollbar-thumb {
-    background: #555; /* Darker thumb when hovered */
-}
-
-/* Firefox scrollbar styling */
-.sidebar {
-    scrollbar-width: thin; /* Hide scrollbar initially */
-    scrollbar-color: #888 transparent; /* Thumb color and track color */
-}
-
-.sidebar:hover {
-    scrollbar-width: auto; /* Show scrollbar when hovered */
-}
-
-.mapButtonsContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    margin-top: 20px; /* Add margin for mobile adjustments */
-}
-
-/* Map Button Styles */
-.mapUI {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%; /* Make the buttons responsive */
-    height: 220px; /* Keep the height boxy */
-    font-family: Arial, Helvetica, sans-serif;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: 3px solid black;
-    box-sizing: border-box;
-    border-radius: 2px;
-    text-align: center;
-    line-height: 1.2;
-    position: relative;
-    margin: 0 auto; /* Center the buttons */
-    transition: all 0.3s ease;
-}
-
-.mapUI span {
-    display: block;
-    font-size: 14px; /* Slightly smaller font size */
-    color: white;
-    text-shadow: 0 0 12px white;
-    padding: 2px 8px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-}
-
-.mapUI:hover {
-    border: 3px solid #FFD700;
-    cursor: pointer;
-    transform: scale(1.05);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Specific Map Button Backgrounds */
-.bankButton {
-    background-image: url("Maps/Bank/bank.avif");
-}
-
-.borderButton {
-    background-image: url("Maps/Border/border.avif");
-}
-
-.chaletButton {
-    background-image: url("Maps/Chalet/chalet.avif");
-}
-
-.clubhouseButton {
-    background-image: url("Maps/Clubhouse/clubhouse.avif");
-}
-
-.coastlineButton {
-    background-image: url("Maps/Coastline/coastline.avif");
-}
-
-.consulateButton {
-    background-image: url("Maps/Consulate/consulate.avif");
-}
-
-.emeraldplainsButton {
-    background-image: url("Maps/EmeraldPlains/emeraldplains.avif");
-}
-
-.kafedostoyevskyButton {
-    background-image: url("Maps/KafeDostoyevsky/kafedostoyevsky.avif");
-}
-
-.kanalButton {
-    background-image: url("Maps/Kanal/kanal.avif");
-}
-
-.lairButton {
-    background-image: url("Maps/Lair/lair.avif");
-}
-
-.nighthavenlabsButton {
-    background-image: url("Maps/NighthavenLabs/nighthavenlabs.avif");
-}
-
-.oregonButton {
-    background-image: url("Maps/Oregon/oregon.avif");
-}
-
-.outbackButton {
-    background-image: url("Maps/Outback/outback.avif");
-}
-
-.skyscraperButton {
-    background-image: url("Maps/Skyscraper/skyscraper.avif");
-}
-
-.themeparkButton {
-    background-image: url("Maps/ThemePark/themepark.avif");
-}
-
-.villaButton {
-    background-image: url("Maps/Villa/villa.avif");
-}
-
 /* Banner */
 .banner {
     width: 100%;
-    height: 65px;
+    height: 50px;
     background-color: black;
     color: white;
     display: flex;
@@ -231,7 +69,7 @@ body {
 }
 
 .banner-text {
-    font-size: 28px;
+    font-size: 30px;
     color: white;
     text-shadow: 0 0 12px white;
     padding: 2px 8px;
@@ -263,23 +101,70 @@ body {
     text-decoration: underline;
 }
 
+/* Secondary Banner */
+.secondary-banner {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(42, 42, 42);
+    color: white;
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    position: fixed;
+    top: 50px; /* Position right below the current banner */
+    left: 0;
+    z-index: 2; /* Same z-index as banner to ensure it's above the video */
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Dropdown Menu in Secondary Banner */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    font-size: 28px;
+    color: white;
+    padding: 0px 60px;
+    cursor: pointer;
+    background-color:  rgb(42, 42, 42); /* Ensure it blends with the banner */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 3; /* Higher z-index for dropdown */
+    left: 0; /* Align with the dropdown button */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-button {
+    background-color: #555; /* Darken the button on hover */
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
-    .container {
-        grid-template-columns: 30% 70%; /* Adjust columns for smaller screens */
-    }
-    .sidebar {
-        width: 30%; /* Adjust width for smaller screens */
-        top: 65px;
-    }
-    .mapUI {
-        width: 100%; /* Adjust width for smaller screens */
-        height: 75px; /* Adjust height for smaller screens */
-        font-size: 12px;
-    }
-    .mapUI span {
-        padding: 2px 4px;
-    }
     .banner {
         flex-direction: column; /* Stack text and buttons */
         height: auto; /* Allow flexible height */
