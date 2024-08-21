@@ -105,8 +105,9 @@ body {
     box-sizing: border-box;
 }
 
+/* Ensure dropdown-content is hidden by default and only shown by JS or hover */
 .dropdown-content {
-    display: none;
+    display: none; /* Start hidden, will be controlled by JS and hover */
     position: absolute;
     background-color: white;
     width: 100%; /* Set dropdown width to match the button width */
@@ -117,6 +118,13 @@ body {
     box-sizing: border-box; /* Ensure padding is included in the width */
     max-height: 60vh; /* Set max height to 60% of the viewport height */
     overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Show dropdown-content on hover for larger screens */
+@media (min-width: 769px) {
+    .dropdown:hover .dropdown-content {
+        display: block; /* Show the dropdown on hover */
+    }
 }
 
 .dropdown-content.show {
@@ -133,10 +141,6 @@ body {
 
 .dropdown-content a:hover {
     background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block; /* Show the dropdown on hover for desktop */
 }
 
 .dropdown:hover .dropdown-button {
@@ -199,5 +203,14 @@ body {
     /* Prevent hover behavior on mobile */
     .dropdown:hover .dropdown-content {
         display: none;
+    }
+
+    /* Ensure dropdown-content is not hidden on mobile */
+    .dropdown-content {
+        display: none; /* Start hidden, will be controlled by JS */
+    }
+
+    .dropdown-content.show {
+        display: block; /* Show when the 'show' class is added */
     }
 }
