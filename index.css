@@ -120,13 +120,6 @@ body {
     overflow-y: auto; /* Enable vertical scrolling */
 }
 
-/* Show dropdown-content on hover for larger screens */
-@media (min-width: 769px) {
-    .dropdown:hover .dropdown-content {
-        display: block; /* Show the dropdown on hover */
-    }
-}
-
 .dropdown-content.show {
     display: block; /* Show the dropdown when the 'show' class is added */
 }
@@ -212,5 +205,12 @@ body {
 
     .dropdown-content.show {
         display: block; /* Show when the 'show' class is added */
+    }
+}
+
+/* Show dropdown-content on hover for larger screens */
+@media (min-width: 769px) {
+    .dropdown:hover .dropdown-content {
+        display: block; /* Show the dropdown on hover */
     }
 }
