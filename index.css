@@ -107,21 +107,22 @@ body {
 }
 
 .dropdown-content {
-    display: none; /* Start hidden, will be controlled by JS */
+    display: none; /* Hidden by default */
     position: absolute;
     background-color: white;
-    width: 100%; /* Set dropdown width to match the button width */
+    width: 100%;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 5; /* Ensure dropdown is above everything else */
-    top: 100%; /* Position the dropdown content below the button */
-    left: 0; /* Align with the dropdown button */
-    box-sizing: border-box; /* Ensure padding is included in the width */
-    max-height: 60vh; /* Set max height to 60% of the viewport height */
-    overflow-y: auto; /* Enable vertical scrolling */
+    z-index: 5;
+    top: 100%;
+    left: 0;
+    box-sizing: border-box;
+    max-height: 60vh;
+    overflow-y: auto;
 }
 
+/* Show dropdown-content on click or hover */
 .dropdown-content.show {
-    display: block; /* Show the dropdown when the 'show' class is added */
+    display: block; /* Show when the 'show' class is added */
 }
 
 .dropdown-content a {
