@@ -194,16 +194,12 @@ body {
         font-size: 14px;
     }
 
-    /* Prevent hover behavior on mobile */
+    /* Disable hover on mobile */
     .dropdown:hover .dropdown-content {
         display: none;
     }
 
-    /* Ensure dropdown-content is not hidden on mobile */
-    .dropdown-content {
-        display: none; /* Start hidden, will be controlled by JS */
-    }
-
+    /* Ensure dropdown-content shows on click */
     .dropdown-content.show {
         display: block; /* Show when the 'show' class is added */
     }

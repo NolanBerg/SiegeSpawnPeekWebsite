@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdownContent.classList.toggle('show');
     }
 
-    // Toggle the dropdown content on button click for mobile screens
+    // Add click event listener for mobile screens
     dropdownButton.addEventListener('click', function(event) {
         if (window.innerWidth <= 768) {  // Check if the screen width is 768px or less
             toggleDropdown();
