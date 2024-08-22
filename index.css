@@ -107,7 +107,7 @@ body {
 
 /* Ensure dropdown-content is hidden by default and only shown by JS or hover */
 .dropdown-content {
-    display: none; /* Start hidden, will be controlled by JS and hover */
+    display: none; /* Start hidden, will be controlled by JS */
     position: absolute;
     background-color: white;
     width: 100%; /* Set dropdown width to match the button width */
