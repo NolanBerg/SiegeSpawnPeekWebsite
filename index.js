@@ -14,4 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
             dropdownContent.classList.remove('show');
         }
     });
+
+    // Prevent dropdown from closing when clicking inside
+    dropdownContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
 });
