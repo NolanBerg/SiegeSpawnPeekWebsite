@@ -2,14 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const dropdownButton = document.querySelector('.dropdown-button');
     const dropdownContent = document.querySelector('.dropdown-content');
 
-    // Function to toggle dropdown
-    function toggleDropdown() {
-        dropdownContent.classList.toggle('show');
-    }
-
-    // Handle the dropdown for all screen sizes
+    // Toggle the dropdown content on button click
     dropdownButton.addEventListener('click', function(event) {
-        toggleDropdown();
+        dropdownContent.classList.toggle('show');
         event.stopPropagation(); // Prevent event from bubbling up
     });
 
@@ -25,3 +20,4 @@ document.addEventListener('DOMContentLoaded', function() {
         event.stopPropagation();
     });
 });
+
