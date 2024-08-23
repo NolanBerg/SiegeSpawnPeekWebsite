@@ -7,12 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdownContent.classList.toggle('show');
     }
 
-    // Add click event listener for mobile screens
+    // Handle the dropdown for all screen sizes
     dropdownButton.addEventListener('click', function(event) {
-        if (window.innerWidth <= 768) {  // Check if the screen width is 768px or less
-            toggleDropdown();
-            event.stopPropagation(); // Prevent event from bubbling up
-        }
+        toggleDropdown();
+        event.stopPropagation(); // Prevent event from bubbling up
     });
 
     // Close the dropdown if clicking outside of it
@@ -26,15 +24,4 @@ document.addEventListener('DOMContentLoaded', function() {
     dropdownContent.addEventListener('click', function(event) {
         event.stopPropagation();
     });
-
-    // Add hover functionality for larger screens
-    if (window.innerWidth > 768) {
-        dropdownButton.addEventListener('mouseenter', function() {
-            dropdownContent.classList.add('show');
-        });
-
-        dropdownButton.addEventListener('mouseleave', function() {
-            dropdownContent.classList.remove('show');
-        });
-    }
 });
