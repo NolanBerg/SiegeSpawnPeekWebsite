@@ -3,6 +3,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: black; /* Ensure the background is black */
     overflow: hidden; /* Prevent scrolling to ensure video stays fixed */
 }
 
@@ -20,14 +21,14 @@ body {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -1; /* Ensure video stays behind everything */
+    z-index: 0; /* Adjust z-index to ensure the video is above the background */
     object-fit: cover; /* Ensure the video covers the entire background */
 }
 
 /* Banner */
 .banner {
     width: 100%;
-    height: 50px;
+    height: 60px; /* Slightly increased height for mobile */
     background-color: black;
     color: white;
     display: flex;
@@ -86,7 +87,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     position: fixed;
-    top: 50px; /* Position right below the current banner */
+    top: 60px; /* Position right below the banner */
     left: 0;
     z-index: 3; /* Ensure it’s above the video */
     padding: 0 20px;
@@ -184,6 +185,10 @@ body {
         height: auto; /* Maintain aspect ratio */
         top: 0;
         left: 0;
+    }
+
+    .banner {
+        height: 60px; /* Increase banner height for smaller screens */
     }
 
     .dropdown-button {
