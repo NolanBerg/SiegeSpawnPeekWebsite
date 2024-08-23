@@ -11,6 +11,19 @@ body {
     flex-direction: column;
 }
 
+/* Video Background */
+#videoBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Ensure video stays behind everything */
+    object-fit: cover; /* Ensure the video covers the entire background */
+}
+
 /* Banner */
 .banner {
     width: 100%;
@@ -158,6 +171,14 @@ body {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+    /* Adjust video for smaller devices */
+    #videoBackground {
+        width: 100%; /* Ensure the video covers the width of the screen */
+        height: auto; /* Maintain aspect ratio */
+        top: 0;
+        left: 0;
+    }
+
     .dropdown-button {
         font-size: 20px; /* Adjusted font size for smaller screens */
         padding: 8px 12px; /* Adjusted padding */
