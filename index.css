@@ -78,6 +78,7 @@ body {
     z-index: 3; /* Ensure it’s above the video */
     padding: 0 20px;
     box-sizing: border-box;
+    flex-wrap: nowrap; /* Prevent wrapping to ensure items stay on the same line */
 }
 
 /* Dropdown Menu in Secondary Banner */
@@ -94,6 +95,7 @@ body {
     cursor: pointer;
     background-color: rgb(33, 33, 33);
     box-sizing: border-box;
+    flex-shrink: 0; /* Prevent the button from shrinking */
 }
 
 .dropdown-content {
@@ -132,6 +134,7 @@ body {
     display: flex;
     gap: 20px; /* Space between the buttons */
     margin-left: 0; /* Align buttons close to the dropdown */
+    flex-shrink: 0; /* Prevent the buttons from shrinking */
 }
 
 .secondary-button {
@@ -155,22 +158,15 @@ body {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .secondary-banner {
-        flex-direction: column; /* Stack the items on top of each other */
-        height: auto; /* Allow flexible height */
-        padding: 10px; /* Add padding for better spacing */
-    }
     .dropdown-button {
-        width: 100%; /* Full width on smaller screens */
-        text-align: center; /* Center the text */
+        font-size: 20px; /* Adjusted font size for smaller screens */
+        padding: 8px 12px; /* Adjusted padding */
     }
     .secondary-buttons {
-        justify-content: center;
-        margin-left: 0;
-        margin-top: 10px; /* Add margin to separate from dropdown */
+        gap: 10px; /* Reduce space between buttons for smaller screens */
     }
     .secondary-button {
-        width: 100%; /* Full width for buttons on smaller screens */
-        text-align: center; /* Center the text */
+        font-size: 16px; /* Adjusted font size for smaller screens */
+        padding: 5px 10px; /* Adjusted padding */
     }
 }
