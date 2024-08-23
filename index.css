@@ -169,7 +169,14 @@ body {
     transform: scale(1.05);
 }
 
-/* Responsive styles */
+/* Hover functionality for larger screens */
+@media (min-width: 769px) {
+    .dropdown:hover .dropdown-content {
+        display: block; /* Show the dropdown on hover */
+    }
+}
+
+/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
     /* Adjust video for smaller devices */
     #videoBackground {

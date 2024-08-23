@@ -2,10 +2,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const dropdownButton = document.querySelector('.dropdown-button');
     const dropdownContent = document.querySelector('.dropdown-content');
 
-    // Toggle the dropdown content on button click
+    // Toggle the dropdown content on button click (for smaller screens)
     dropdownButton.addEventListener('click', function(event) {
-        dropdownContent.classList.toggle('show');
-        event.stopPropagation(); // Prevent event from bubbling up
+        if (window.innerWidth <= 768) {  // Only apply for smaller screens
+            dropdownContent.classList.toggle('show');
+            event.stopPropagation(); // Prevent event from bubbling up
+        }
     });
 
     // Close the dropdown if clicking outside of it
@@ -20,4 +22,3 @@ document.addEventListener('DOMContentLoaded', function() {
         event.stopPropagation();
     });
 });
-
