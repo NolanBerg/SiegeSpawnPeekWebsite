@@ -103,7 +103,7 @@ body {
 
 /* Search Bar Container */
 .search-container {
-    margin-top: 140px;
+    margin-top: 160px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -111,12 +111,18 @@ body {
     position: relative;
 }
 
+/* Search Bar */
 .search-bar {
     font-size: 18px;
     padding: 8px 12px;
     width: 300px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 3px solid black;
+}
+
+.search-bar::placeholder {
+    color: black;
+    opacity: 1; /* Ensures the placeholder text is fully opaque */
 }
 
 /* Autocomplete Suggestions */
