@@ -111,12 +111,21 @@ body {
     position: relative;
 }
 
+/* Search Bar */
 .search-bar {
     font-size: 18px;
     padding: 8px 12px;
     width: 300px;
     border-radius: 5px;
     border: 3px solid black;
+<<<<<<< HEAD
+=======
+}
+
+.search-bar::placeholder {
+    color: black;
+    opacity: 1; /* Ensures the placeholder text is fully opaque */
+>>>>>>> 2a08b97c964e628173bf362229d8f13db16b1ae6
 }
 
 /* Autocomplete Suggestions */
