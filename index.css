@@ -103,7 +103,7 @@ body {
 
 /* Search Bar Container */
 .search-container {
-    margin-top: 140px;
+    margin-top: 150px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -116,7 +116,7 @@ body {
     padding: 8px 12px;
     width: 300px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 3px solid black;
 }
 
 /* Autocomplete Suggestions */
