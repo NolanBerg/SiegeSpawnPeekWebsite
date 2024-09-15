@@ -33,27 +33,31 @@ document.addEventListener('DOMContentLoaded', function() {
         populateSuggestions(searchText);
     });
 
+    // Populate the autocomplete suggestions
     function populateSuggestions(searchText) {
         suggestionsContainer.innerHTML = ''; // Clear previous suggestions
 
+        // Filter maps based on the search text
         const filteredMaps = Object.keys(mapUrls).filter(mapName => 
             mapName.toLowerCase().includes(searchText)
         );
 
+        // Display suggestions
         filteredMaps.forEach(mapName => {
             const suggestion = document.createElement('div');
             suggestion.className = 'autocomplete-suggestion';
             suggestion.textContent = mapName;
             suggestion.addEventListener('click', () => {
-                window.location.href = mapUrls[mapName];
+                window.location.href = mapUrls[mapName]; // Redirect to the map's URL
             });
             suggestionsContainer.appendChild(suggestion);
         });
 
+        // Show or hide the suggestions container
         suggestionsContainer.style.display = filteredMaps.length > 0 ? 'block' : 'none';
     }
 
-    // Hide suggestions when clicking outside
+    // Hide suggestions when clicking outside the search bar or suggestions
     document.addEventListener('click', function(event) {
         if (!searchBar.contains(event.target) && !suggestionsContainer.contains(event.target)) {
             suggestionsContainer.style.display = 'none';

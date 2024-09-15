@@ -1,4 +1,3 @@
-/* General Styles */
 html, body {
     height: 100%;
     margin: 0;
@@ -82,7 +81,9 @@ body {
     flex-shrink: 0;
 }
 
+/* Secondary Button */
 .secondary-button {
+    position: relative; /* Important for positioning the pop-up */
     font-size: 18px;
     color: white;
     padding: 5px 15px;
@@ -99,6 +100,26 @@ body {
 .secondary-button:hover {
     background-color: #555;
     transform: scale(1.05);
+}
+
+/* Pop-up Window */
+.popup-window {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    top: 100%;
+    left: 0;
+    z-index: 5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+}
+
+.secondary-button:hover .popup-window {
+    display: block;
 }
 
 /* Search Bar Container */
@@ -118,14 +139,6 @@ body {
     width: 300px;
     border-radius: 5px;
     border: 3px solid black;
-<<<<<<< HEAD
-=======
-}
-
-.search-bar::placeholder {
-    color: black;
-    opacity: 1; /* Ensures the placeholder text is fully opaque */
->>>>>>> 2a08b97c964e628173bf362229d8f13db16b1ae6
 }
 
 /* Autocomplete Suggestions */
