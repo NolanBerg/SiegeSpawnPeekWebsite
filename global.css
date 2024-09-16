@@ -1,3 +1,4 @@
+/* General */
 html, body {
     height: 100%;
     margin: 0;
@@ -25,7 +26,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 2;  /* Ensure banner is on top */
     padding: 0 20px;
     box-sizing: border-box;
 }
@@ -55,7 +56,7 @@ body {
     position: fixed;
     top: 60px;
     left: 0;
-    z-index: 3;
+    z-index: 3;  /* Ensure secondary banner is on top */
     padding: 0 20px;
     box-sizing: border-box;
 }
@@ -70,7 +71,7 @@ body {
 
 /* Secondary Button */
 .secondary-button {
-    position: relative; /* Important for positioning the pop-up */
+    position: relative;
     font-size: 18px;
     color: white;
     padding: 5px 15px;
@@ -100,7 +101,7 @@ body {
     width: 200px;
     top: 100%;
     left: 0;
-    z-index: 5;
+    z-index: 5;  /* Ensure pop-up is above other elements */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-size: 14px;
 }
@@ -109,71 +110,69 @@ body {
     display: block;
 }
 
-.video-container {
-    top: 90px;
-    position: relative; /* Relative positioning to contain the overlay */
-    width: 800px; /* Set a fixed width for the video container */
-    height: auto; /* Adjust height to be automatic */
-    margin: 20px auto; /* Center the container and add vertical spacing */
-    overflow: hidden; /* Hide any overflow */
-    z-index: 1; /* Ensure video container is below the button */
+/* Video Gallery */
+.video-gallery {
+    max-height: calc(100vh - 120px); /* Adjust to leave room for the banners */
+    overflow-y: auto;
+    padding: 10px;
+    margin-top: 110px; /* Offset from the top banners */
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;  /* Set z-index lower than banners and pop-ups */
 }
 
-.video-container::before {
-    content: "";
-    display: block;
-    padding-top: 56.25%; /* Maintain aspect ratio (16:9) */
+/* Video Containers */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
 }
 
 .video-container video {
-    position: absolute;
-    top: 0px; /* Adjust top value to move the video up */
-    left: 0;
     width: 100%;
-    height: 100%;
-    border: 4px solid black; 
-    box-sizing: border-box;
+    height: auto;
+    border: 4px solid black;
     border-radius: 4px;
 }
 
+/* Text Overlay */
 .text-overlay {
     position: absolute;
-    top: 10px; /* Position text as needed */
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
     font-size: 24px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 5px;
-    z-index: 2; /* Ensure text is above the video */
+    z-index: 2;
 }
 
-/* Style for the main menu button */
+/* Scrollable Main Menu Button */
 #mainMenuButton {
-    top: 110px;
     display: block;
-    margin: 20px auto; /* Center the button */
+    margin: 10px auto;
     padding: 10px 20px;
     font-size: 18px;
     color: white;
-    background-color: grey; /* Bootstrap primary blue color */
+    background-color: grey;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    position: relative;
     z-index: 0;
 }
 
 #mainMenuButton:hover {
-    background-color: rgb(109, 108, 108); /* Darker blue on hover */
-    transform: scale(1.05); /* Slightly larger on hover */
+    background-color: rgb(109, 108, 108);
+    transform: scale(1.05);
 }
 
 #mainMenuButton:active {
-    background-color: #004085; /* Even darker blue on click */
-    transform: scale(0.95); /* Slightly smaller on click */
+    background-color: #004085;
+    transform: scale(0.95);
 }
 
 /* Email Link */
