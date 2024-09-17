@@ -1,30 +1,46 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/global.css" rel="stylesheet">
     <title>Villa Spawn Peeks</title>
+    <link href="/global.css" rel="stylesheet">
 </head>
-<body>
+<body> 
     <div class="banner">
         <span class="banner-text">SiegeSpawnPeeks.NET</span>
-        <div class="banner-buttons">
-            <button id="aboutPageButton" class="banner-button"><strong>About</strong></button>
-            <button id="mapsPageButton" class="banner-button"><strong>Maps</strong></button>
-            <button id="contactPageButton" class="banner-button"><strong>Contact</strong></button>
-        </div>
-    </div>
-    <button id="mainMenuButton">Main Menu</button>
-    
-    <div class="video-container">
-        <div class="text-overlay">Office Runout</div>
-        <video controls>
-            <source src="villa1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
     </div>
 
+    <div class="secondary-banner">
+        <div class="secondary-buttons">
+            <div class="secondary-button">
+                About
+                <div class="popup-window">
+                    <p>Welcome to SiegeSpawnPeeks.NET! Look up your desired map to find pro level spawn peeks.</p>
+                </div>
+            </div>
+            <div class="secondary-button">
+                Contact
+                <div class="popup-window">
+                    <p>Contact us at: nolanb912@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="video-gallery">
+        <button id="mainMenuButton">Main Menu</button> <!-- Moved inside the scrollable area -->
+
+        <div class="video-container">
+            <div class="text-overlay">Office Runout</div>
+            <video controls>
+                <source src="villa1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+    <a href="mailto:nolanb912@gmail.com" class="email-link">Send clips to: nolanb912@gmail.com</a>
+    
     <script src="/global.js"></script>
 </body>
 </html>
