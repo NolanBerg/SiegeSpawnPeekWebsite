@@ -138,7 +138,7 @@ body {
     padding: 12px 16px; /* Increased padding for better spacing */
     width: 300px;
     border-radius: 25px; /* Rounded corners */
-    border: 2px solid #ccc; /* Lighter border for a clean look */
+    border: 2px solid #000000; /* Lighter border for a clean look */
     outline: none; /* Remove default outline */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     transition: all 0.3s ease-in-out; /* Smooth transition for hover and focus */
@@ -161,7 +161,6 @@ body {
     overflow-y: auto;
     background-color: white;
     border-radius: 10px; /* Rounded corners for the suggestions dropdown */
-    border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for the dropdown */
     z-index: 4;
     box-sizing: border-box;
