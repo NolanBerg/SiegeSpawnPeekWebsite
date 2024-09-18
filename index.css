@@ -76,7 +76,7 @@ body {
 /* Secondary Buttons */
 .secondary-buttons {
     display: flex;
-    gap: 20px;
+    
     margin-left: 0;
     flex-shrink: 0;
 }
@@ -86,7 +86,7 @@ body {
     position: relative; /* Important for positioning the pop-up */
     font-size: 18px;
     color: white;
-    padding: 5px 15px;
+    padding: .7em 1em;
     cursor: pointer;
     background-color: rgb(39, 39, 39);
     text-decoration: none;
