@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">  
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +7,19 @@
     <link href="/index.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Background Video -->
     <video autoplay loop muted playsinline id="videoBackground">
         <source src="/siegevid.mp4" type="video/mp4">
         <source src="/siegevid.webm" type="video/webm">
         Your browser does not support the video tag.
-    </video>    
+    </video>
 
+    <!-- Main Banner -->
     <div class="banner">
         <span class="banner-text">SiegeSpawnPeeks.NET</span>
     </div>
 
+    <!-- Secondary Banner with Buttons -->
     <div class="secondary-banner">
         <div class="secondary-buttons">
             <div class="secondary-button">
@@ -34,13 +37,26 @@
         </div>
     </div>
 
+    <!-- Search Bar with Autocomplete Suggestions -->
     <div class="search-container">
         <input type="text" class="search-bar" placeholder="Search Maps...">
         <div class="autocomplete-suggestions"></div> <!-- Autocomplete suggestions container -->
     </div>
 
+    <!-- Email Link -->
     <a href="mailto:nolanb912@gmail.com" class="email-link">Send clips to: nolanb912@gmail.com</a>
-    
+
+    <!-- File Upload Form -->
+    <div class="upload-container">
+        <h2>Upload a Video</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="videoInput" name="video" accept="video/*" required>
+            <button type="submit">Upload Video</button>
+        </form>
+        <p id="uploadStatus"></p> <!-- Status message for upload -->
+    </div>
+
+    <!-- JavaScript -->
     <script src="/index.js"></script>
 </body>
 </html>

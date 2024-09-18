@@ -1,4 +1,35 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Video Upload Functionality
+    const uploadForm = document.getElementById('uploadForm');
+    const videoInput = document.getElementById('videoInput');
+    const uploadStatus = document.getElementById('uploadStatus');
+
+    uploadForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form from submitting the traditional way
+
+        const formData = new FormData();
+        formData.append('video', videoInput.files[0]);
+
+        fetch('http://localhost:3000/upload', {
+            method: 'POST',
+            body: formData
+        })
+        
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                uploadStatus.textContent = 'Video uploaded successfully!';
+            } else {
+                uploadStatus.textContent = 'Failed to upload video.';
+            }
+        })
+        .catch(err => {
+            console.error('Error uploading video:', err);
+            uploadStatus.textContent = 'An error occurred during upload.';
+        });
+    });
+
+    // Search Bar and Autocomplete Functionality
     const searchBar = document.querySelector('.search-bar');
     const suggestionsContainer = document.querySelector('.autocomplete-suggestions');
 

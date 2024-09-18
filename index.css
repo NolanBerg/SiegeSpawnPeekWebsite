@@ -197,6 +197,41 @@ body {
     text-decoration: underline;
 }
 
+.upload-container {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid red;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    z-index: 10;
+}
+
+.upload-container h2 {
+    margin-top: 0;
+}
+
+.upload-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.upload-container input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.upload-container button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-container button:hover {
+    background-color: #45a049;
+}
+
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
     #videoBackground {
