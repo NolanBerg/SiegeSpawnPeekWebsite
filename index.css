@@ -76,7 +76,7 @@ body {
 /* Secondary Buttons */
 .secondary-buttons {
     display: flex;
-    
+    gap: 1em;
     margin-left: 0;
     flex-shrink: 0;
 }
@@ -206,16 +206,12 @@ body {
         left: 0;
     }
 
-    .banner {
-        height: 60px;
-    }
-
     .search-bar {
-        width: 100%;
+        width: 90vw;
     }
 
     .autocomplete-suggestions {
-        width: 100%;
+        width: 90vw;
         left: 0;
         transform: none;
     }
