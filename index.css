@@ -128,7 +128,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    z-index: 3;
+    z-index: 6;
     position: relative;
 }
 
@@ -162,7 +162,7 @@ body {
     background-color: white;
     border-radius: 8px; /* Rounded corners for the suggestions dropdown */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for the dropdown */
-    z-index: 4;
+    z-index: 6;
     box-sizing: border-box;
 }
 
@@ -197,35 +197,48 @@ body {
     text-decoration: underline;
 }
 
+/* Updated Upload Container */
 .upload-container {
-    margin: 20px;
-    padding: 20px;
-    border: 1px white;
+    margin: 80px auto; /* Center container and reduce margin */
+    padding: 10px; /* Reduced padding for compact appearance */
+    max-width: 400px; /* Limit the container's width */
+    border: 1px solid #ddd; /* Add a subtle border */
     border-radius: 5px;
-    background-color: #f9f9f9;
-    z-index: 10;
+    background-color: #f0f0f0;
+    z-index: 4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    text-align: center; /* Center the content */
 }
 
 .upload-container h2 {
     margin-top: 0;
+    font-size: 20px;
 }
 
+/* Form inside upload container */
 .upload-container form {
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center form elements */
 }
 
 .upload-container input[type="file"] {
     margin-bottom: 10px;
+    padding: 5px;
+    width: 90%; /* Adjust file input size */
 }
 
+/* Updated Upload Button */
 .upload-container button {
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    max-width: 150px;
+    text-align: center;
+    margin-top: 20px; /* Add spacing around button */
 }
 
 .upload-container button:hover {
