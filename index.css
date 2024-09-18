@@ -124,7 +124,7 @@ body {
 
 /* Search Bar Container */
 .search-container {
-    margin-top: 140px;
+    margin-top: 10em;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -137,7 +137,7 @@ body {
     font-size: 18px;
     padding: 12px 16px; /* Increased padding for better spacing */
     width: 300px;
-    border-radius: 22px; /* Rounded corners */
+    border-radius: 15px; /* Rounded corners */
     border: 2px solid #000000; /* Lighter border for a clean look */
     outline: none; /* Remove default outline */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -207,11 +207,11 @@ body {
     }
 
     .search-bar {
-        width: 90vw;
+        width: 80vw;
     }
 
     .autocomplete-suggestions {
-        width: 90vw;
+        width: 80vw;
         left: 0;
         transform: none;
     }
