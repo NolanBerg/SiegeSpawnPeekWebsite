@@ -137,7 +137,7 @@ body {
     font-size: 18px;
     padding: .8em 1em; /* Increased padding for better spacing */
     width: 22em;
-    border-radius: 15px; /* Rounded corners */
+    border-radius: 10px; /* Rounded corners */
     border: 2px solid #000000; /* Lighter border for a clean look */
     outline: none; /* Remove default outline */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -177,33 +177,13 @@ body {
     background-color: #e6e6e6;
 }
 
-/* Email Link */
-.email-link {
-    position: fixed;
-    bottom: 0;
-    right: 1em;
-    z-index: 3;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    color: white;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: .4em .6em;
-    border-radius: 5px;
-    margin-bottom: .8em;
-}
-
-.email-link:hover {
-    text-decoration: underline;
-}
-
 /* Updated Upload Container */
 .upload-container {
     margin: 80px auto; /* Center container and reduce margin */
     padding: 10px; /* Reduced padding for compact appearance */
     max-width: 400px; /* Limit the container's width */
-    border: 1px solid #ddd; /* Add a subtle border */
-    border-radius: 5px;
+    border: 2px solid black; /* Add a subtle border */
+    border-radius: 10px;
     background-color: #f0f0f0;
     z-index: 4;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
@@ -267,4 +247,24 @@ body {
         transform: none;
         margin: 0 auto;
     }
+}
+
+/* Email Link */
+.email-link {
+    position: fixed;
+    bottom: 0;
+    right: 1em;
+    z-index: 3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: .4em .6em;
+    border-radius: 5px;
+    margin-bottom: .8em;
+}
+
+.email-link:hover {
+    text-decoration: underline;
 }
