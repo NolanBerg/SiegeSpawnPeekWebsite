@@ -2,23 +2,31 @@ document.addEventListener('DOMContentLoaded', function() {
     // Video Upload Functionality
     const uploadForm = document.getElementById('uploadForm');
     const videoInput = document.getElementById('videoInput');
+    const mapSelect = document.getElementById('mapSelect'); // Get the map select element
     const uploadStatus = document.getElementById('uploadStatus');
 
     uploadForm.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form from submitting the traditional way
 
+        if (!mapSelect.value) {
+            uploadStatus.textContent = 'Please select a map.';
+            return;
+        }
+
         const formData = new FormData();
         formData.append('video', videoInput.files[0]);
+        formData.append('map', mapSelect.value); // Append the selected map
 
-        fetch('http://localhost:3000/upload', {
+        fetch('/upload', { // Use relative path to match server's route
             method: 'POST',
             body: formData
         })
-        
         .then(response => response.json())
         .then(data => {
             if (data.success) {
                 uploadStatus.textContent = 'Video uploaded successfully!';
+                // Clear the form
+                uploadForm.reset();
             } else {
                 uploadStatus.textContent = 'Failed to upload video.';
             }

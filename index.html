@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags and Title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siege Spawn Peeks</title>
+    <!-- Link to CSS -->
     <link href="/index.css" rel="stylesheet">
 </head>
 <body>
@@ -25,7 +27,7 @@
             <div class="secondary-button">
                 About
                 <div class="popup-window">
-                    <p>Welcome to SiegeSpawnPeeks.NET! Look up your desired map to find pro level spawn peeks.</p>
+                    <p>Welcome to SiegeSpawnPeeks.NET! Look up your desired map to find pro-level spawn peeks.</p>
                 </div>
             </div>
             <div class="secondary-button">
@@ -51,6 +53,26 @@
         <h2>Upload a Video</h2>
         <form id="uploadForm" enctype="multipart/form-data">
             <input type="file" id="videoInput" name="video" accept="video/*" required>
+            <!-- Map Selection Dropdown -->
+            <select id="mapSelect" name="map" required>
+                <option value="" disabled selected>Select Map</option>
+                <option value="Bank">Bank</option>
+                <option value="Border">Border</option>
+                <option value="Chalet">Chalet</option>
+                <option value="Clubhouse">Clubhouse</option>
+                <option value="Coastline">Coastline</option>
+                <option value="Consulate">Consulate</option>
+                <option value="Emerald Plains">Emerald Plains</option>
+                <option value="Kafe Dostoyevsky">Kafe Dostoyevsky</option>
+                <option value="Kanal">Kanal</option>
+                <option value="Lair">Lair</option>
+                <option value="Nighthaven Labs">Nighthaven Labs</option>
+                <option value="Oregon">Oregon</option>
+                <option value="Outback">Outback</option>
+                <option value="Skyscraper">Skyscraper</option>
+                <option value="Theme Park">Theme Park</option>
+                <option value="Villa">Villa</option>
+            </select>
             <button type="submit">Upload Video</button>
         </form>
         <p id="uploadStatus"></p> <!-- Status message for upload -->
