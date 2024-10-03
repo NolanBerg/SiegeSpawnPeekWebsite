@@ -5,11 +5,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const mapSelect = document.getElementById('mapSelect'); // Get the map select element
     const uploadStatus = document.getElementById('uploadStatus');
 
+    // Function to display and auto-hide the upload status message
+    function showUploadStatus(message, duration = 5000) {
+        uploadStatus.textContent = message;
+
+        // Clear any existing timeout
+        if (uploadStatus.timeoutId) {
+            clearTimeout(uploadStatus.timeoutId);
+        }
+
+        // Hide the message after the specified duration
+        uploadStatus.timeoutId = setTimeout(function() {
+            uploadStatus.textContent = '';
+            uploadStatus.timeoutId = null; // Clear the timeoutId
+        }, duration);
+    }
+
     uploadForm.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form from submitting the traditional way
 
         if (!mapSelect.value) {
-            uploadStatus.textContent = 'Please select a map.';
+            showUploadStatus('Please select a map.');
             return;
         }
 
@@ -24,16 +40,16 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                uploadStatus.textContent = 'Video uploaded successfully!';
+                showUploadStatus('Video uploaded successfully!');
                 // Clear the form
                 uploadForm.reset();
             } else {
-                uploadStatus.textContent = 'Failed to upload video.';
+                showUploadStatus('Failed to upload video.');
             }
         })
         .catch(err => {
             console.error('Error uploading video:', err);
-            uploadStatus.textContent = 'An error occurred during upload.';
+            showUploadStatus('An error occurred during upload.');
         });
     });
 

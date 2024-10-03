@@ -268,3 +268,9 @@ body {
 .email-link:hover {
     text-decoration: underline;
 }
+
+#uploadStatus {
+    margin-top: 10px;
+    font-size: 16px;
+    color: green; /* Use red for error messages if you implement dynamic coloring */
+}
